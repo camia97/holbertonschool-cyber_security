@@ -1,2 +1,2 @@
 #!/bin/bash
-sha256sum --check | echo "$1"
+echo "$2 $1" | sha256sum --check
