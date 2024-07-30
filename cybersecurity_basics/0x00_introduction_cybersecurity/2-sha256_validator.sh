@@ -1,2 +1,2 @@
 #!/bin/bash
-sha256sum -c $1
+shasum -a 256 --check | echo "$1"
