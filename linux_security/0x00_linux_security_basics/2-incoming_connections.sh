@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo ss -t sport = :80
+sudo ufw allow 80 | sudo ss -t sport = :80
