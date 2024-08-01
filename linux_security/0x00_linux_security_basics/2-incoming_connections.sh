@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo ufw enable | sudo ss -ltp sport = :80
+sudo ss -ltp sport = :80 | ufw allow 80
