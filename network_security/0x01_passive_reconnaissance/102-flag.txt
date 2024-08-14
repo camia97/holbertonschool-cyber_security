@@ -1,1 +1,1 @@
-10 mail2.passive.hbtn.
+100 mail1
