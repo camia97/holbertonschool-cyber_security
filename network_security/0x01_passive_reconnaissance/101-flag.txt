@@ -1,2 +1,2 @@
-holberton
-home
+holberton.passive
+home.passive
