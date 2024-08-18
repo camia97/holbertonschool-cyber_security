@@ -1,0 +1,4 @@
+# Nmap 7.94SVN scan initiated Sun Aug 18 18:07:13 2024 as: nmap -sS -oG 0-ports.txt 10.42.54.2
+Host: 10.42.54.2 ()	Status: Up
+Host: 10.42.54.2 ()	Ports: 80/open/tcp//http///	Ignored State: filtered (999)
+# Nmap done at Sun Aug 18 18:07:31 2024 -- 1 IP address (1 host up) scanned in 17.95 seconds
