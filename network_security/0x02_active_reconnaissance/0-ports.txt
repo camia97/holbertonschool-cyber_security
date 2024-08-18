@@ -1,1 +1,1 @@
-Host: 10.42.54.2 ()	Ports: 80/open/tcp//http///	Ignored State: filtered (999)
+80
