@@ -1,1 +1,1 @@
-tcp.flags == 0x02
+icmp.type == 3
