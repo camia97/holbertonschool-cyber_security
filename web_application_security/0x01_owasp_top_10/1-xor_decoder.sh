@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 pass="$1"
 pass="${pass#'{xor}'}"
 decoded=$(echo "$pass" | base64 -d)
