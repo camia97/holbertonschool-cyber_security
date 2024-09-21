@@ -1,0 +1,2 @@
+/api/a3/nosql_injection/market_values
+/api/a3/nosql_injection/sign_in
