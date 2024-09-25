@@ -1,20 +1,26 @@
 #!/bin/bash
 
-# Asegúrate de que se pasa un argumento
+# Verifica que se pase un argumento
 if [ "$#" -ne 1 ]; then
   echo "Uso: $0 {xor}HASH"
   exit 1
 fi
 
-# Extraer el hash del argumento
+# Extrae el hash del argumento
 pass="$1"
 pass="${pass#'{xor}'}"
 
-# Decodificar la cadena base64
-decoded_pass=$(echo "$pass" | base64 --decode)
+# Decodifica la cadena base64, asegurando que no se generen null bytes
+decoded_pass=$(echo "$pass" | base64 -d 2>/dev/null)
+
+# Verifica si la decodificación fue exitosa
+if [ $? -ne 0 ]; then
+  echo "Decodificación fallida"
+  exit 1
+fi
 
 decoded_pass_xor=""
-# Realizar la operación XOR
+# Realiza la operación XOR
 for ((i = 0; i < ${#decoded_pass}; i++)); do
     char="${decoded_pass:$i:1}"
     ascii_value=$(printf "%d" "'$char")
@@ -22,6 +28,6 @@ for ((i = 0; i < ${#decoded_pass}; i++)); do
     decoded_pass_xor+="$(printf "$(printf '\\x%x' $xor_result)")"
 done
 
-# Mostrar el resultado
+# Muestra el resultado
 echo -e "$decoded_pass_xor"
 
