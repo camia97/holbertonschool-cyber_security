@@ -1,7 +1,7 @@
 #!/bin/bash
 pass="$1"
 pass="${pass#'{xor}'}"
-decoded_pass=$(echo "$pass" | base64 -d)
+decoded_pass=$(echo "$pass" | base64 --decode)
 
 decoded_pass_xor=""
 for ((i = 0; i < ${#decoded_pass}; i++)); do
