@@ -11,8 +11,3 @@ class HelloWorld
     puts "Hello #{@message}!"
   end
 end
-
-# Crear objeto
-
-hello_world_instance = HelloWorld.new
-hello_world_instance.print_hello
