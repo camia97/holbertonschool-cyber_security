@@ -8,6 +8,6 @@ class HelloWorld
   end
 
   def print_hello
-    puts "Hello #{@message}!"
+    puts "Hello, #{@message}!"
   end
 end
