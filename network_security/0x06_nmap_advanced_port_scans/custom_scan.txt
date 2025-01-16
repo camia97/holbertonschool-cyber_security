@@ -1,0 +1,20 @@
+# Nmap 7.94SVN scan initiated Tue Nov  5 10:29:41 2024 as: /usr/lib/nmap/nmap -sA --scanflags URGACKPSHRSTSYNFIN -p80-90 -oN custom_scan.txt www.holbertonschool.com
+Nmap scan report for www.holbertonschool.com (54.207.103.6)
+Host is up (0.00057s latency).
+Other addresses for www.holbertonschool.com (not scanned): 52.67.160.177 54.207.181.39
+rDNS record for 54.207.103.6: ec2-54-207-103-6.sa-east-1.compute.amazonaws.com
+
+PORT   STATE      SERVICE
+80/tcp unfiltered http
+81/tcp unfiltered hosts2-ns
+82/tcp unfiltered xfer
+83/tcp unfiltered mit-ml-dev
+84/tcp unfiltered ctf
+85/tcp unfiltered mit-ml-dev
+86/tcp unfiltered mfcobol
+87/tcp unfiltered priv-term-l
+88/tcp unfiltered kerberos-sec
+89/tcp unfiltered su-mit-tg
+90/tcp unfiltered dnsix
+
+# Nmap done at Tue Nov  5 10:29:41 2024 -- 1 IP address (1 host up) scanned in 0.26 seconds
