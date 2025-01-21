@@ -10,12 +10,18 @@ def post_request(url, body_params = {})
     http.use_ssl = uri.scheme == 'https'
 
     request = Net::HTTP::Post.new(uri.path, {'Content-Type' => 'application/json'})
-    request.body = body_params.to_json unless body_params.empty?
+    request.body = body_params.empty? ? nil : body_params.to_json
 
     response = http.request(request)
 
     status = "#{response.code} #{response.message}"
-    body = response.body.strip.empty? ? "{}" : JSON.pretty_generate(JSON.parse(response.body))
+    
+    if response.body.strip.empty?
+        body = "{}"
+    else
+        parsed_body = JSON.parse(response.body)
+        body = JSON.generate(parsed_body)
+    end
 
     puts "Response status: #{status}"
     puts "Response body:"
