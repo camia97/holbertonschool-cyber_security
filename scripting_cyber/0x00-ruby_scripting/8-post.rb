@@ -19,5 +19,5 @@ def post_request(url, body_params = {})
 
     puts "Response status: #{status}"
     puts "Response body:"
-    puts body
+    print body
 end
